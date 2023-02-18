@@ -12,11 +12,13 @@ public class PlayerMovement : MonoBehaviour
     public bool movementLocked = false;
 
     private Rigidbody rb;
+    private Animator camAnimator;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        camAnimator = transform.GetChild(0).GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,6 +35,11 @@ public class PlayerMovement : MonoBehaviour
                 Vector3 newPosition  = transform.position + -transform.right * speed * Time.deltaTime;
 
                 rb.MovePosition(newPosition);
+                camAnimator.SetBool("moving", true); //Set moving parameter to true if the player is moving
+            }
+            else
+            { //Set moving parameter to false if the player stops moving
+                camAnimator.SetBool("moving", false);
             }
 
             //Rotate left (-90 degrees)
@@ -47,6 +54,10 @@ public class PlayerMovement : MonoBehaviour
                 Rotate(90);
             }
             
+        }
+        else
+        { //Set moving parameter to false if the movement gets locked
+            camAnimator.SetBool("moving", false);
         }
 
     }
@@ -70,17 +81,6 @@ public class PlayerMovement : MonoBehaviour
 
     void SetMovementState()
     {
-        Debug.Log("function running");
-
         movementLocked = !movementLocked;
-
-        /*if (!movementLocked) //If the movement IS NOT locked
-        {
-            movementLocked = true; //Lock the movement
-        }
-        else if (movementLocked) //If the movement IS locked
-        {
-            movementLocked = false; //Unlock the movement
-        }*/
     }
 }
