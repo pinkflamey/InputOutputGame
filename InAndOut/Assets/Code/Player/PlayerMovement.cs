@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
 
 
     public bool movementLocked = false;
+
+    private Rigidbody rb;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -28,7 +30,11 @@ public class PlayerMovement : MonoBehaviour
             //Walk forward
             if (Input.GetKey(KeyCode.W))
             {
-                transform.Translate(Vector3.forward * speed * Time.deltaTime);
+                Vector3 newPosition  = transform.position 
+                                       + -transform.right * speed * Time.deltaTime;
+
+                rb.MovePosition(newPosition);
+                
             }
 
             //Rotate left (-90 degrees)
