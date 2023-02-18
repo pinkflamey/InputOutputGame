@@ -30,11 +30,9 @@ public class PlayerMovement : MonoBehaviour
             //Walk forward
             if (Input.GetKey(KeyCode.W))
             {
-                Vector3 newPosition  = transform.position 
-                                       + -transform.right * speed * Time.deltaTime;
+                Vector3 newPosition  = transform.position + -transform.right * speed * Time.deltaTime;
 
                 rb.MovePosition(newPosition);
-                
             }
 
             //Rotate left (-90 degrees)
@@ -74,13 +72,15 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("function running");
 
-        if (!movementLocked) //If the movement IS NOT locked
+        movementLocked = !movementLocked;
+
+        /*if (!movementLocked) //If the movement IS NOT locked
         {
             movementLocked = true; //Lock the movement
         }
         else if (movementLocked) //If the movement IS locked
         {
             movementLocked = false; //Unlock the movement
-        }
+        }*/
     }
 }
