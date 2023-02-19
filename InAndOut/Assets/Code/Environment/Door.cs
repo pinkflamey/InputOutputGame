@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    public bool trigger = false;
+    [SerializeField] private bool trigger = false;
 
     public bool isOpen = false;
 
@@ -36,5 +36,10 @@ public class Door : MonoBehaviour
                 isOpen = !isOpen;
             }
         }
+    }
+
+    public void TriggerDoor()
+    {
+        trigger = true;
     }
 }
