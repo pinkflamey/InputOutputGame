@@ -4594,6 +4594,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleDoorway (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5911290761817153513, guid: be86b04c81b4ffd419e69c433f762bc0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999714
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911290761817153513, guid: be86b04c81b4ffd419e69c433f762bc0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00022269487
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911290761817153513, guid: be86b04c81b4ffd419e69c433f762bc0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0019387412
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911290761817153513, guid: be86b04c81b4ffd419e69c433f762bc0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0013832911
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911290761817153513, guid: be86b04c81b4ffd419e69c433f762bc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911290761817153513, guid: be86b04c81b4ffd419e69c433f762bc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.222
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911290761817153513, guid: be86b04c81b4ffd419e69c433f762bc0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.159
+      objectReference: {fileID: 0}
     - target: {fileID: 8503368576308463391, guid: be86b04c81b4ffd419e69c433f762bc0, type: 3}
       propertyPath: m_RootOrder
       value: 4

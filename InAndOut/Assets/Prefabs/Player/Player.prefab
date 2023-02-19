@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 686777925799607605}
   - component: {fileID: 686777925799607602}
+  - component: {fileID: -6503530295951510249}
   - component: {fileID: 686777925799607604}
   - component: {fileID: 686777925799607607}
   - component: {fileID: 686777925799607603}
@@ -52,6 +53,18 @@ MonoBehaviour:
   speed: 5
   rotationDuration: 2
   movementLocked: 0
+--- !u!114 &-6503530295951510249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686777925799607561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d018a10dc3813408f39bf3d33ff9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &686777925799607604
 MeshFilter:
   m_ObjectHideFlags: 0
