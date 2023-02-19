@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Radar : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Radar : MonoBehaviour
     private float[][] levels;
 
     [SerializeField] private GameObject monster;
+    [SerializeField] private NavMeshAgent agent;
     
     // Start is called before the first frame update
     void Start()
@@ -24,12 +26,14 @@ public class Radar : MonoBehaviour
         monster = GameObject.Find("Monster");
         
         levels = new float[][]{level0, level1, level2, level3, level4};
+
+        agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        distanceToMonster = Vector3.Distance(monster.transform.position, transform.position);
+        distanceToMonster = CalculateDistance();
 
         distanceLevel = (int)CalculateLevel(distanceToMonster);
     }
@@ -47,4 +51,38 @@ public class Radar : MonoBehaviour
         return -1; //Else, return -1
 
     }
+
+    private float CalculateDistance()
+    {
+        NavMeshPath path = new NavMeshPath(); //Create abstract path
+        
+        //Calculate path between player and monster and store in path
+        NavMesh.CalculatePath(
+            transform.position, monster.transform.position, NavMesh.AllAreas, path
+            );
+
+        Vector3[] points = new Vector3[path.corners.Length + 2];
+        
+        points[0] = transform.position; //First point is player position
+        points[points.Length - 1] = monster.transform.position; //Last point is monster position
+        
+        // The points in between are the corners of the path.
+        for(int i = 0; i < path.corners.Length; i++)
+        {
+            points[i + 1] = path.corners[i];
+        }
+        
+        float totalDistance = 0; //Setup distance variable
+        
+        for(int i = 0; i < points.Length - 1; i++)
+        {
+            totalDistance += Vector3.Distance(points[i], points[i + 1]);
+        }
+        
+        
+
+        return totalDistance;
+    }
+    
+    
 }
