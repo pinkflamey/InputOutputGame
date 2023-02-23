@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using InTheHand.Net.Bluetooth;
 using InTheHand.Net.Sockets;
 using TMPro;
 using UnityEngine;
@@ -31,9 +33,13 @@ public class BTHandler : MonoBehaviour
 
     private IEnumerable<BluetoothDeviceInfo> devices;
 
+    private BluetoothClient btClient;
+
     // Start is called before the first frame update
     void Start()
     {
+        btClient = new BluetoothClient();
+
         devices = GetPairedDevices();
         
         GenerateButtons(devices);
@@ -48,17 +54,8 @@ public class BTHandler : MonoBehaviour
         }
     }
 
-    /*IReadOnlyCollection<BluetoothDeviceInfo> SearchDevices()
-    {
-        BluetoothClient btClient = new BluetoothClient();
-
-        return btClient.
-    }*/
-
     IEnumerable<BluetoothDeviceInfo> GetPairedDevices()
     {
-        BluetoothClient btClient = new BluetoothClient();
-
         return btClient.PairedDevices;
     }
 
@@ -86,6 +83,15 @@ public class BTHandler : MonoBehaviour
     {
         selectedDevice = device;
 
+        try
+        {
+            btClient.Connect(selectedDevice.DeviceAddress, BluetoothService.HealthDevice);
+        }
+        catch
+        {
+            Debug.Log("Couldn't connect to this device, or it is not a health device!");
+        }
+        
         selectTextObj.GetComponent<TextMeshProUGUI>().text = selectedDevice.DeviceName;
     }
 }
