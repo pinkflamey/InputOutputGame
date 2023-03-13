@@ -64,14 +64,10 @@ public class ReadTextFile : MonoBehaviour
 
         if( FileBrowser.Success )
         {
-            filePath = FileBrowser.Result[0];
+            SetFilePath(FileBrowser.Result[0]);
         }
     }
 
-    public void ReadInputField()
-    {
-        SetFilePath(inputField.text);
-    }
 
     public void SetFilePath(string aPath)
     {
