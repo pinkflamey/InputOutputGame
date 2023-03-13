@@ -20,6 +20,7 @@ def notification_handler(sender, data):
     #Store data in text file
     file = open('heartrate.txt', 'w')
     file.write(str(output_numbers[1]))
+    file.close()
 
 async def main():
 
