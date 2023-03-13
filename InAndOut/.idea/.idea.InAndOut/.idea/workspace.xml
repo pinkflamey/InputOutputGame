@@ -3,6 +3,34 @@
   <component name="ChangeListManager">
     <list default="true" id="a2af1335-3f09-42f3-bdc0-a6b418174f7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InAndOut/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InAndOut/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Bluetooth/BTHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Bluetooth/BTHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Bluetooth/BTHandler2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Bluetooth/BTHandler2.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Bluetooth/DeviceButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Bluetooth/DeviceButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Bluetooth/OldBluetoothHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Bluetooth/OldBluetoothHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/32feet.NET.3.5.0.0.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/32feet.NET.3.5.0.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/32feet.NET.3.5.0.0/32feet.NET.3.5.0.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/32feet.NET.3.5.0.0/32feet.NET.3.5.0.0.nupkg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/32feet.NET.3.5.0.0/lib.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1/32feet-package-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1/32feet-package-icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1/InTheHand.Net.Bluetooth.4.0.33.1.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1/InTheHand.Net.Bluetooth.4.0.33.1.nupkg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1/lib.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1/lib/net461.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1/lib/net461/InTheHand.Net.Bluetooth.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1/lib/net461/InTheHand.Net.Bluetooth.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1/lib/net461/InTheHand.Net.Bluetooth.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1/lib/net461/InTheHand.Net.Bluetooth.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/InTheHand.Net.Bluetooth.4.0.33.1/lib/netstandard2.0.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bluetooth2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bluetooth2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/packages.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,9 +38,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e831bba1fda1483d8656220bd519b331ec00/82/c4e4362e/IScanResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5bc8cff18633df1f9b68fc21fab7a8141a6ab29ab6f176a6a6e0d6347ec/BluetoothAddress.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ffb25b0764936a614ea79a0a9866617f626056e15e81332a7d92e5a59445e/BluetoothService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/Bluetooth/BTHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/Bluetooth/DeviceButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Environment/Door.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Player/Radar.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -26,6 +54,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -92,6 +121,15 @@
       <workItem from="1676743709633" duration="8080000" />
       <workItem from="1676893679455" duration="1707000" />
       <workItem from="1677146165505" duration="1330000" />
+      <workItem from="1677524123852" duration="3764000" />
+      <workItem from="1677688483431" duration="1238000" />
+      <workItem from="1677690491825" duration="4338000" />
+      <workItem from="1678200212040" duration="3592000" />
+      <workItem from="1678266158960" duration="573000" />
+      <workItem from="1678278935105" duration="10000" />
+      <workItem from="1678278990088" duration="142000" />
+      <workItem from="1678279152955" duration="114000" />
+      <workItem from="1678279343061" duration="1361000" />
     </task>
     <servers />
   </component>
@@ -100,6 +138,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
