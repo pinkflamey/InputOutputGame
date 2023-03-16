@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public static Information GameInfo;
+    public static Debugger Debugger;
 
     //Singleton pattern for GameManager
     void Awake()
@@ -20,5 +21,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         GameInfo = this.transform.Find("Information").GetComponent<Information>();
+        Debugger = this.transform.Find("Debug").GetComponent<Debugger>();
     }
 }
