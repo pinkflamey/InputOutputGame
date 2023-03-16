@@ -12,7 +12,6 @@ public class ReadTextFile : MonoBehaviour
 {
     [SerializeField] private string filePath;
     [SerializeField] private string fileData = null;
-    [SerializeField] private TextMeshProUGUI inputField;
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +23,11 @@ public class ReadTextFile : MonoBehaviour
     void Update()
     {
         fileData = ReadTextFileData(filePath);
+    }
+
+    public string GetFileData()
+    {
+        return fileData;
     }
 
     private string ReadTextFileData(string path)
