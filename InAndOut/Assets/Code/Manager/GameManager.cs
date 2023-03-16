@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,5 +23,15 @@ public class GameManager : MonoBehaviour
 
         GameInfo = this.transform.Find("Information").GetComponent<Information>();
         Debugger = this.transform.Find("Debug").GetComponent<Debugger>();
+    }
+
+    public void LoadScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

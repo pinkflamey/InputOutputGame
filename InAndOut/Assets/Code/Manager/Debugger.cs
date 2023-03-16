@@ -11,6 +11,11 @@ public class Debugger : MonoBehaviour
     [Header("Debug objects")]
     
     public GameObject HRdebug;
+
+    public enum DebugTools
+    {
+        HR_text
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -21,6 +26,12 @@ public class Debugger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        try
+        {
+            HRdebug = GameManager.GameInfo.GetDebugObject(DebugTools.HR_text);
+        }
+        catch{}
+
         if (Input.GetKeyDown(kc_HRdebug))
         {
             //(De)activate debug

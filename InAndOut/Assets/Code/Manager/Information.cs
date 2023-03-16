@@ -18,17 +18,37 @@ public class Information : MonoBehaviour
     void Start()
     {
         rtf = GetComponent<ReadTextFile>();
-        debug_hr_ui = GameObject.Find("HR-debug").GetComponent<TextMeshProUGUI>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        try
+        {
+            debug_hr_ui = GameObject.Find("HR-debug").GetComponent<TextMeshProUGUI>();
+        }
+        catch{}
+        
         //Store heartrate in information script, not only in ReadTextFile
         Int32.TryParse(rtf.GetFileData(), out heartrate);
         
         //Set debug text
         debug_hr_ui.text = heartrate.ToString();
+    }
+
+    public GameObject GetDebugObject(Debugger.DebugTools tool)
+    {
+        if (tool == Debugger.DebugTools.HR_text)
+        {
+            try
+            {
+                return debug_hr_ui.gameObject;
+            }
+            catch{}
+        }
+
+        return null;
     }
 
     public int GetHeartRate()
