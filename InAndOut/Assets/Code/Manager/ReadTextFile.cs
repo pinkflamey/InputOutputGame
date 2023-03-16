@@ -22,6 +22,8 @@ public class ReadTextFile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        filePath = PlayerPrefs.GetString("hr-filepath");
+        
         fileData = ReadTextFileData(filePath);
     }
 
@@ -76,5 +78,6 @@ public class ReadTextFile : MonoBehaviour
     public void SetFilePath(string aPath)
     {
         filePath = aPath;
+        PlayerPrefs.SetString("hr-filepath", aPath);
     }
 }
