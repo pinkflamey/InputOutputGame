@@ -10,9 +10,12 @@ using UnityEngine.UI;
 
 public class Microbit : MonoBehaviour
 {
-    [SerializeField] private bool sendData = false;
+    [SerializeField] private bool openSerial = false;
+    
+    [Space]
     
     [SerializeField] private string data;
+    [SerializeField] private bool serialConnected = false;
 
     [Space]
     
@@ -22,8 +25,7 @@ public class Microbit : MonoBehaviour
 
     [Space]
     
-    [SerializeField] private  TMP_Dropdown dropdown;
-
+    private  TMP_Dropdown dropdown;
     private SerialPort Serial;
 
     // Start is called before the first frame update
@@ -44,24 +46,24 @@ public class Microbit : MonoBehaviour
             dropdown.AddOptions(ports);
         }
         catch { }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (openSerial)
+        {
+            openSerial = false;
+            ConfirmPortSelection();
+        }
+        
         try
         {
             selectedPortName = ports[dropdown.value];
         }
         catch { }
 
-        if (sendData)
-        {
-            sendData = false;
-            Debug.Log("Sending data through Serial Port " + Serial.PortName);
-            Serial.WriteLine("TEST");
-            Debug.Log("Data sent");
-        }
     }
     
     void OpenSerial(string aPortName, int aBaudrate, Parity aParity, int aDataBits, StopBits aStopBits)
@@ -79,11 +81,29 @@ public class Microbit : MonoBehaviour
         if (Serial.IsOpen)
         {
             Debug.Log("Connection successful");
+            WriteString("READY");
+            serialConnected = true;
+        }
+        else
+        {
+            Debug.Log("Connection failed - closing serial");
+            Serial.Close();
+            serialConnected = false;
         }
     }
 
     public void ConfirmPortSelection()
     {
         OpenSerial(selectedPortName, baudrate, Parity.None, 8, StopBits.One);
+    }
+
+    public void WriteString(string line)
+    {
+        Serial.WriteLine(line);
+    }
+
+    public bool GetSerialStatus()
+    {
+        return serialConnected;
     }
 }

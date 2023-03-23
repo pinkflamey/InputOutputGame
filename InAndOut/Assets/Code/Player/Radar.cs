@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Shapes2D;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -19,6 +20,8 @@ public class Radar : MonoBehaviour
 
     [SerializeField] private GameObject monster;
     [SerializeField] private NavMeshAgent agent;
+
+    private int oldLevel;
     
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,14 @@ public class Radar : MonoBehaviour
         distanceToMonster = CalculateDistance();
 
         distanceLevel = (int)CalculateLevel(distanceToMonster);
+
+        //If the serial is available
+        if (distanceLevel != oldLevel && GameManager.MicroBit.GetSerialStatus() == true)
+        {
+            //Send the level to the micro bit
+            GameManager.MicroBit.WriteString(distanceLevel.ToString());
+            oldLevel = distanceLevel;
+        }
     }
 
     private float CalculateLevel(float distance)
@@ -83,6 +94,10 @@ public class Radar : MonoBehaviour
 
         return totalDistance;
     }
-    
+
+    public int GetDistanceLevel()
+    {
+        return distanceLevel;
+    }
     
 }

@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public static Information GameInfo;
     public static Debugger Debugger;
+    public static Microbit MicroBit;
 
     //Singleton pattern for GameManager
     void Awake()
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
 
         GameInfo = this.transform.Find("Information").GetComponent<Information>();
         Debugger = this.transform.Find("Debug").GetComponent<Debugger>();
+        MicroBit = this.transform.Find("Microbit").GetComponent<Microbit>();
     }
 
     public void LoadScene(string scene)
