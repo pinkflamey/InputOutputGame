@@ -36,7 +36,7 @@ public class Radar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distanceToMonster = CalculateDistance();
+        distanceToMonster = CalculatePathDistance(gameObject.transform.position, monster.transform.position);
 
         distanceLevel = (int)CalculateLevel(distanceToMonster);
 
@@ -63,19 +63,19 @@ public class Radar : MonoBehaviour
 
     }
 
-    private float CalculateDistance()
+    public static float CalculatePathDistance(Vector3 a, Vector3 b)
     {
         NavMeshPath path = new NavMeshPath(); //Create abstract path
         
         //Calculate path between player and monster and store in path
         NavMesh.CalculatePath(
-            transform.position, monster.transform.position, NavMesh.AllAreas, path
+            a, b, NavMesh.AllAreas, path
             );
 
         Vector3[] points = new Vector3[path.corners.Length + 2];
         
-        points[0] = transform.position; //First point is player position
-        points[points.Length - 1] = monster.transform.position; //Last point is monster position
+        points[0] = a; //First point is player position
+        points[points.Length - 1] = b; //Last point is monster position
         
         // The points in between are the corners of the path.
         for(int i = 0; i < path.corners.Length; i++)
@@ -90,8 +90,6 @@ public class Radar : MonoBehaviour
             totalDistance += Vector3.Distance(points[i], points[i + 1]);
         }
         
-        
-
         return totalDistance;
     }
 

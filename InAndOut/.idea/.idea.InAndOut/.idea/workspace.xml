@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a2af1335-3f09-42f3-bdc0-a6b418174f7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InAndOut/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InAndOut/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Zombie Mutant/Zombie mutant  Animator Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Zombie Mutant/Zombie mutant  Animator Controller.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Zombie Mutant/Zombie mutant@Idle(1).fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Zombie Mutant/Zombie mutant@Idle(1).fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Zombie Mutant/Zombie mutant@Run.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Zombie Mutant/Zombie mutant@Run.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Zombie Mutant/Zombie mutant@Walk.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Zombie Mutant/Zombie mutant@Walk.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Monster/MonsterAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Monster/MonsterAnimationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Monster/MonsterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Monster/MonsterMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/Radar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/Radar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monster/Monster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monster/Monster.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
     </list>
@@ -130,7 +127,7 @@
       <workItem from="1679427462588" duration="4327000" />
       <workItem from="1679567786477" duration="5309000" />
       <workItem from="1679844306481" duration="2900000" />
-      <workItem from="1679902320790" duration="786000" />
+      <workItem from="1679902320790" duration="6989000" />
     </task>
     <servers />
   </component>
