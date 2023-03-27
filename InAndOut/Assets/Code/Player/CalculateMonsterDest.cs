@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Shapes2D;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CalculateMonsterDest : MonoBehaviour
 {
@@ -16,10 +17,16 @@ public class CalculateMonsterDest : MonoBehaviour
     [SerializeField] private float multiplierHigher; //heartrate = nHr * multiplierHigher
     [SerializeField] private float calculatedDistance; //The calculated distance based on multiplier
 
+    private GameObject player;
+    private NavMeshAgent pAgent;
+
+    private bool canCalc = true;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = transform.parent.gameObject;
+        pAgent = player.GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -41,7 +48,18 @@ public class CalculateMonsterDest : MonoBehaviour
 
         calculatedDistance = CalculateDistance(nHr, growthFactor, multiplierHigher);
 
+        if (canCalc)
+        {
+            canCalc = false;
+            StartCoroutine(Loop());
+        }
+    }
 
+    private IEnumerator Loop()
+    {
+        SetPosition(calculatedDistance);
+        yield return new WaitForSeconds(1f);
+        canCalc = true;
     }
 
     private float CalculateDistance(float b, float g, float m)
@@ -49,6 +67,25 @@ public class CalculateMonsterDest : MonoBehaviour
         //a = normal heartrate * 0.966^(normal heartrate * multiplier)
         return b * Mathf.Pow(g, b * m);
     }
+
+    private void SetPosition(float distance)
+    {
+        bool foundPoint = false;
+
+        while (!foundPoint)
+        {
+            Vector2 _randDir = Random.insideUnitCircle * distance; //Generate random direction
+            Vector3 randDir = new Vector3(_randDir.x, 0, _randDir.y); //Convert to Vector3
+
+            //If the distance between the random point and the player is over 5
+            if (Radar.CalculatePathDistance(player.transform.position, randDir) > distance)
+            {
+                transform.position = randDir;
+                foundPoint = true;
+            }
+        }
+    }
+    
     
     
 

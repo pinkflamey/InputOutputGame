@@ -8233,7 +8233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2625558591875067591, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.755005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2625558591875067591, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8241,7 +8241,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2625558591875067591, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.6795025
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625558591875067591, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625558591875067591, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625558591875067591, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2625558591875067591, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3154095208295352782, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
       propertyPath: m_Name
@@ -8270,9 +8286,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082a6861702c9294aa4d3a82b90e522b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destMarker: {fileID: 0}
+  destMarker: {fileID: 1078188483}
   heartrate: 75
   nHr: 70
+  growthFactor: 0.97
   multiplierHigher: 0
   calculatedDistance: 0
 --- !u!1001 &1869003174853966116

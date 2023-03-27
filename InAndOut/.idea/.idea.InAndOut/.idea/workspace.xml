@@ -4,6 +4,7 @@
     <list default="true" id="a2af1335-3f09-42f3-bdc0-a6b418174f7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InAndOut/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InAndOut/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Player/CalculateMonsterDest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/CalculateMonsterDest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,6 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bae255e3e08e46f7bc2fbd23dde96338158800/70/86570370/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e831bba1fda1483d8656220bd519b331ec00/82/c4e4362e/IScanResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5bc8cff18633df1f9b68fc21fab7a8141a6ab29ab6f176a6a6e0d6347ec/BluetoothAddress.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ffb25b0764936a614ea79a0a9866617f626056e15e81332a7d92e5a59445e/BluetoothService.cs" root0="SKIP_HIGHLIGHTING" />
@@ -125,7 +127,7 @@
       <workItem from="1679427462588" duration="4327000" />
       <workItem from="1679567786477" duration="5309000" />
       <workItem from="1679844306481" duration="2900000" />
-      <workItem from="1679902320790" duration="10567000" />
+      <workItem from="1679902320790" duration="12143000" />
     </task>
     <servers />
   </component>
