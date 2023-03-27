@@ -9,6 +9,7 @@ public class Information : MonoBehaviour
 {
     [Header("Information")]
     [SerializeField] private int heartrate;
+    [SerializeField] private int nHr;
 
     //Private internal variables
     private ReadTextFile rtf;
@@ -54,5 +55,15 @@ public class Information : MonoBehaviour
     public int GetHeartRate()
     {
         return heartrate;
+    }
+
+    public int GetNHr()
+    {
+        return nHr;
+    }
+
+    public void SetNHr(int nHr)
+    {
+        this.nHr = nHr;
     }
 }
