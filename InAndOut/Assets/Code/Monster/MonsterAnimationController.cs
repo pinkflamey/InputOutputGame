@@ -21,6 +21,13 @@ public class MonsterAnimationController : MonoBehaviour
     
     [Header("Settings")]
     [SerializeField] private Animator animator;
+    
+    [Header("Debugging")]
+    [SerializeField] private bool idle;
+    [SerializeField] private bool walking;
+    [SerializeField] private bool running;
+    [SerializeField] private bool attack_1;
+    [SerializeField] private bool attack_2;
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +37,38 @@ public class MonsterAnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (idle)
+        {
+            idle = false;
+            StartCoroutine(SetAnimatorState(MonsterAnimationStates.idle));
+        }
+
+        if (walking)
+        {
+            walking = false;
+            StartCoroutine(SetAnimatorState(MonsterAnimationStates.walking));
+        }
+
+        if (running)
+        {
+            running = false;
+            StartCoroutine(SetAnimatorState(MonsterAnimationStates.running));
+        }
+
+        if (attack_1)
+        {
+            attack_1 = false;
+            StartCoroutine(SetAnimatorState(MonsterAnimationStates.attack_1));
+        }
+
+        if (attack_2)
+        {
+            attack_2 = false;
+            StartCoroutine(SetAnimatorState(MonsterAnimationStates.attack_2));
+        }
     }
 
-    public void SetAnimatorState(MonsterAnimationStates state)
+    public IEnumerator SetAnimatorState(MonsterAnimationStates state)
     {
         //For each parameter
         foreach (AnimatorControllerParameter par in animator.parameters)
@@ -55,6 +90,8 @@ public class MonsterAnimationController : MonoBehaviour
                 {
                     //Trigger the parameter
                     animator.SetTrigger(par.name);
+                    yield return new WaitForSeconds(0.25f);
+                    StartCoroutine(SetAnimatorState(MonsterAnimationStates.idle));
                 }
                 //Else, if the parameter type is not a boolean or trigger
                 else
@@ -75,6 +112,8 @@ public class MonsterAnimationController : MonoBehaviour
                 }
             }
         }
+
+        yield return null;
     }
 
     public MonsterAnimationStates GetCurrentState()
