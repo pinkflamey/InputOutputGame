@@ -36,6 +36,9 @@ public class CalculateMonsterDest : MonoBehaviour
         player = transform.parent.gameObject;
         pAgent = player.GetComponent<NavMeshAgent>();
         
+        //Get normal heart rate
+        nHr = GameManager.GameInfo.GetNHr();
+        
         //Start timer
         StartCoroutine(Timer(5f, 10f));
     }
