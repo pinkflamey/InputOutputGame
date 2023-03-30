@@ -8292,9 +8292,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destMarker: {fileID: 1078188483}
   maxFailedTries: 75
+  minDistance: 0.95
+  maxDistance: 1.05
   heartrate: 75
   nHr: 70
-  growthFactor: 0.98
+  growthFactor: 0.975
   multiplierHigher: 0.98
   calculatedDistance: 0
   failedTries: 0

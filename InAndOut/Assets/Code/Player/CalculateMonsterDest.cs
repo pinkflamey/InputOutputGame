@@ -11,6 +11,8 @@ public class CalculateMonsterDest : MonoBehaviour
 {
     [SerializeField] private GameObject destMarker;
     [SerializeField] private float maxFailedTries;
+    [SerializeField] private float minDistance;
+    [SerializeField] private float maxDistance;
 
     [Header("Information")]
     
@@ -35,7 +37,7 @@ public class CalculateMonsterDest : MonoBehaviour
         pAgent = player.GetComponent<NavMeshAgent>();
         
         //Start timer
-        StartCoroutine(Timer(5f));
+        StartCoroutine(Timer(5f, 10f));
     }
 
     // Update is called once per frame
@@ -56,21 +58,33 @@ public class CalculateMonsterDest : MonoBehaviour
 
         //Calculate the required distance
         calculatedDistance = CalculateDistance(nHr, growthFactor, multiplierHigher);
-
-        
-        
     }
 
-    private IEnumerator Timer(float delay)
+    private IEnumerator Timer(float delayHR, float delayRN)
     {
+        /*
+         * This timer sets a new position every delay seconds
+         */
+        
         Debug.Log("Restarting timer loop...");
-        StartCoroutine(SetHRBasedPosition(calculatedDistance));
-        
-        yield return new WaitForSeconds(delay);
-        
-        StartCoroutine(Timer(delay));
-    }
 
+        //If the distance calculated is over 10
+        if (calculatedDistance > 10)
+        {
+            transform.position = GetRandomPosition(); //Set to random position
+            
+            yield return new WaitForSeconds(delayRN); //Wait delay
+        }
+        else //If the distance is under or equal to 10
+        {
+            StartCoroutine(SetHRBasedPosition(calculatedDistance)); //Start attempting to set heart rate based position
+        
+            yield return new WaitForSeconds(delayHR); //Wait delay
+        }
+        
+        
+        StartCoroutine(Timer(delayHR, delayRN));
+    }
 
     private Vector3 GetRandomPosition()
     {
@@ -87,14 +101,17 @@ public class CalculateMonsterDest : MonoBehaviour
     {
         Debug.Log("Starting pos calculation...");
         
+        //Create random direction to attempt
         randDir = new Vector3(Random.Range(-1, 2), 0, Random.Range(-1, 2));
 
+        //Possible position is equal to the random direction * distance
         newPos = randDir * distance;
             
-        //Calculate the distance between the new possible position and the player
+        //Calculate the distance between the new possible position and the player, based on the navmesh
         pathDist = Radar.CalculatePathDistance(newPos, player.transform.position);
 
-        if (pathDist >= distance * 0.9 && pathDist <= distance * 1.1f)
+        //If the calculated distance based on the navmesh is between minDistance% and maxDistance%
+        if (pathDist >= distance * minDistance && pathDist <= distance * maxDistance)
         {
             Debug.Log("Succeeded");
 
@@ -105,22 +122,26 @@ public class CalculateMonsterDest : MonoBehaviour
             
             yield return null;
         }
-        else
+        else //If the attempt was unsuccesful
         {
-            failedTries++;
-            yield return new WaitForSeconds(0.01f);
+            failedTries++; //Add to the failed tries
+            
+            yield return new WaitForSeconds(0.01f); //Delay to prevent overflow
 
+            //If the failed tries has NOT exceeded the maximum failed tries
             if (failedTries < maxFailedTries)
             {
                 Debug.Log("Position did not meet requirements. Restarting loop...");
                 
+                //Restart the loop, try again
                 StartCoroutine(SetHRBasedPosition(calculatedDistance));
                 yield return null;
             }
-            else
+            else //If the failed tries has exceeded the maximum failed tries
             {
                 Debug.Log("Too many failed tries: setting position in front of player based on distance");
 
+                //Set the marker position to in front of the player based on distance
                 transform.position =
                     new Vector3(player.transform.position.x, 0, player.transform.position.z + distance);
             
