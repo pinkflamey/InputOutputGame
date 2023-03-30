@@ -809,7 +809,7 @@ PrefabInstance:
       objectReference: {fileID: 1569523110}
     - target: {fileID: 3831032699734007385, guid: a3dcda89cd1392c45a26263ffd8cdb5c, type: 3}
       propertyPath: walkSpeed
-      value: 3.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3831032699734007385, guid: a3dcda89cd1392c45a26263ffd8cdb5c, type: 3}
       propertyPath: dNotifyPos
@@ -8175,6 +8175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 686777925799607602, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
+      propertyPath: hrDestCalc
+      value: 
+      objectReference: {fileID: 686777926618782296}
     - target: {fileID: 686777925799607605, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -8287,11 +8291,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destMarker: {fileID: 1078188483}
+  maxFailedTries: 75
   heartrate: 75
   nHr: 70
-  growthFactor: 0.97
-  multiplierHigher: 0
+  growthFactor: 0.98
+  multiplierHigher: 0.98
   calculatedDistance: 0
+  failedTries: 0
 --- !u!1001 &1869003174853966116
 PrefabInstance:
   m_ObjectHideFlags: 0

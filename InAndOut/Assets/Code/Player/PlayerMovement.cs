@@ -5,11 +5,11 @@ using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 1f;
-    public float rotationDuration = 3f;
+    [SerializeField] private float speed = 1f;
+    [SerializeField] private float rotationDuration = 3f;
+    [SerializeField] private CalculateMonsterDest hrDestCalc;
 
-
-    public bool movementLocked = false;
+    [SerializeField] private bool movementLocked = false;
 
     private Rigidbody rb;
     private Animator camAnimator;
@@ -19,12 +19,12 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         camAnimator = transform.GetChild(0).GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
         //Movement checks
         if (!movementLocked) //Only allow movement input while the movement IS NOT locked
         {
@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
                 rb.MovePosition(newPosition);
                 camAnimator.SetBool("moving", true); //Set moving parameter to true if the player is moving
+
             }
             else
             { //Set moving parameter to false if the player stops moving
