@@ -917,7 +917,7 @@ PrefabInstance:
       objectReference: {fileID: 1569523110}
     - target: {fileID: 3831032699734007385, guid: a3dcda89cd1392c45a26263ffd8cdb5c, type: 3}
       propertyPath: walkSpeed
-      value: 2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3831032699734007385, guid: a3dcda89cd1392c45a26263ffd8cdb5c, type: 3}
       propertyPath: dNotifyPos
@@ -7363,8 +7363,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6312d6675051807c5b0d1d3f55f0ae32, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.48
+  m_Pitch: 1.32
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -8485,9 +8485,25 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 686777925799607602, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 686777925799607602, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
       propertyPath: hrDestCalc
       value: 
       objectReference: {fileID: 686777926618782296}
+    - target: {fileID: 686777925799607603, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
+      propertyPath: m_Size.x
+      value: 2.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 686777925799607603, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
+      propertyPath: m_Size.y
+      value: 2.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 686777925799607603, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
+      propertyPath: m_Size.z
+      value: 2.45
+      objectReference: {fileID: 0}
     - target: {fileID: 686777925799607605, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -8531,6 +8547,10 @@ PrefabInstance:
     - target: {fileID: 686777925799607605, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 686777925933479714, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 686777925933479715, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
       propertyPath: BlockCount
