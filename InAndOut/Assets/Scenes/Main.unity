@@ -795,6 +795,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 23634470101120935, guid: a3dcda89cd1392c45a26263ffd8cdb5c, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 256826733079762230, guid: a3dcda89cd1392c45a26263ffd8cdb5c, type: 3}
       propertyPath: animator
       value: 
@@ -823,6 +827,10 @@ PrefabInstance:
       propertyPath: hrDestination
       value: 
       objectReference: {fileID: 686777926618782295}
+    - target: {fileID: 4982851140423149591, guid: a3dcda89cd1392c45a26263ffd8cdb5c, type: 3}
+      propertyPath: walkingMultiplier
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4992429576765516225, guid: a3dcda89cd1392c45a26263ffd8cdb5c, type: 3}
       propertyPath: m_RootOrder
       value: 1
