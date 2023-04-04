@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 686777925799607605}
   - component: {fileID: 686777925799607602}
   - component: {fileID: -6503530295951510249}
+  - component: {fileID: 7542300939452026643}
   - component: {fileID: 686777925799607604}
   - component: {fileID: 686777925799607607}
   - component: {fileID: 686777925799607603}
@@ -91,6 +92,21 @@ MonoBehaviour:
   - 4
   monster: {fileID: 0}
   agent: {fileID: 0}
+--- !u!114 &7542300939452026643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686777925799607561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d077d83a2db68bedaa6dc621f025e751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartrate: 0
+  baseHeartRate: 71.54
+  pitchBendGroup: {fileID: 0}
 --- !u!33 &686777925799607604
 MeshFilter:
   m_ObjectHideFlags: 0
