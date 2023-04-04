@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a2af1335-3f09-42f3-bdc0-a6b418174f7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InAndOut/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InAndOut/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monster/Monster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monster/Monster.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/HeartbeatSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/HeartbeatSound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/209182-EFX_SD_Monster_FS_Impact.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/209182-EFX_SD_Monster_FS_Impact.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/271912-Human-Heartbeat-CU-Loop-02.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/271912-Human-Heartbeat-CU-Loop-02.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/410619-Monster_Within_-Sicarius_-Footsteps-02.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/410619-Monster_Within_-Sicarius_-Footsteps-02.mp3.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +131,7 @@
       <workItem from="1679844306481" duration="2900000" />
       <workItem from="1679902320790" duration="12143000" />
       <workItem from="1680160414234" duration="10854000" />
-      <workItem from="1680612898673" duration="3192000" />
+      <workItem from="1680612898673" duration="4169000" />
     </task>
     <servers />
   </component>

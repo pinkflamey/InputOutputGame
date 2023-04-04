@@ -29,17 +29,26 @@ public class MonsterAudioController : MonoBehaviour
         
         if (currentState == MonsterAnimationController.MonsterAnimationStates.walking)
         {
-            audioSource.mute = false;
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
             SetPitch(walkingMultiplier);
         }
         else if (currentState == MonsterAnimationController.MonsterAnimationStates.running)
         {
-            audioSource.mute = false;
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
             SetPitch(runningMultiplier);
         }
         else
         {
-            audioSource.mute = true;
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
         }
     }
 

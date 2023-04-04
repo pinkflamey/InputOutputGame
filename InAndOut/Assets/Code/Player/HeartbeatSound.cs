@@ -15,7 +15,7 @@ public class HeartbeatSound : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponents<AudioSource>()[0];
         
     }
 

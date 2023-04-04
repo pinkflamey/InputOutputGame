@@ -5,6 +5,16 @@ using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
+    enum PlayerState
+    {
+        Idle,
+        Walking
+    }
+
+    [SerializeField] private PlayerState playerState;
+    
+    [Space]
+    
     [SerializeField] private float speed = 1f;
     [SerializeField] private float rotationDuration = 3f;
     [SerializeField] private CalculateMonsterDest hrDestCalc;
@@ -13,18 +23,34 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody rb;
     private Animator camAnimator;
+    private AudioSource audioSource;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         camAnimator = transform.GetChild(0).GetComponent<Animator>();
-        
+        audioSource = GetComponents<AudioSource>()[1];
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (playerState == PlayerState.Walking)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+        else if (playerState == PlayerState.Idle)
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+        }
+        
         //Movement checks
         if (!movementLocked) //Only allow movement input while the movement IS NOT locked
         {
@@ -37,10 +63,14 @@ public class PlayerMovement : MonoBehaviour
                 rb.MovePosition(newPosition);
                 camAnimator.SetBool("moving", true); //Set moving parameter to true if the player is moving
 
+                playerState = PlayerState.Walking; //Set state to walking if player is moving
+
             }
             else
             { //Set moving parameter to false if the player stops moving
                 camAnimator.SetBool("moving", false);
+
+                playerState = PlayerState.Idle; //Set state to idle if player is idle
             }
 
             //Rotate left (-90 degrees)
