@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   rotationDuration: 2
+  hrDestCalc: {fileID: 0}
   movementLocked: 0
 --- !u!114 &-6503530295951510249
 MonoBehaviour:
@@ -151,7 +152,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.75, y: 2, z: 1.75}
+  m_Size: {x: 2.75, y: 2.75, z: 2.75}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &686777925799607600
 Rigidbody:
