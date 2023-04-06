@@ -94,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
         
         if (context.started)
         {
-            Debug.Log("Started interaction");
             moving = true;
             
             camAnimator.SetBool("moving", true); //Set moving parameter to true
@@ -102,7 +101,6 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (context.canceled)
         {
-            Debug.Log("Canceled interaction");
             moving = false;
             
             camAnimator.SetBool("moving", false); //Set moving parameter to false if the player stops moving

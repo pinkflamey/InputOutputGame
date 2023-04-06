@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 686777925799607605}
-  - component: {fileID: 7344946161636293645}
+  - component: {fileID: 8662024886191860490}
   - component: {fileID: 686777925799607602}
+  - component: {fileID: 1327207209331211653}
   - component: {fileID: -6503530295951510249}
   - component: {fileID: 7542300939452026643}
   - component: {fileID: 686777925799607604}
@@ -41,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &7344946161636293645
+--- !u!114 &8662024886191860490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,7 +69,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 686777925799607602}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -84,7 +85,7 @@ MonoBehaviour:
     m_ActionName: Player/Forward[/Keyboard/w,/Keyboard/upArrow,/SwitchProControllerHID/dpad/up,/SwitchProControllerHID/leftStick/up]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 686777925799607602}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: Rotate
         m_Mode: 4
@@ -100,7 +101,7 @@ MonoBehaviour:
     m_ActionName: Player/Turn Left[/Keyboard/q,/Keyboard/leftArrow,/SwitchProControllerHID/dpad/left,/SwitchProControllerHID/leftShoulder]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 686777925799607602}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: Rotate
         m_Mode: 4
@@ -115,14 +116,26 @@ MonoBehaviour:
     m_ActionId: c9690e20-310a-4514-a0b2-26bf4db7f7bb
     m_ActionName: Player/Turn Right[/Keyboard/e,/Keyboard/rightArrow,/SwitchProControllerHID/dpad/right,/SwitchProControllerHID/rightShoulder]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1327207209331211653}
+        m_TargetAssemblyTypeName: PlayerInteractionHandler, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b4339ff8-4f36-4063-b0de-5b6e03e8bac7
     m_ActionName: Player/Action[/Keyboard/space,/SwitchProControllerHID/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 686777925933479717}
+  m_Camera: {fileID: 0}
 --- !u!114 &686777925799607602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +163,21 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+--- !u!114 &1327207209331211653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686777925799607561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37233f706e72e904bb91082aab978dab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionRange: 3
+  closestInteractable: {fileID: 0}
+  interactablesInRange: []
 --- !u!114 &-6503530295951510249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,7 +290,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.75, y: 2.75, z: 2.75}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &686777925799607600
 Rigidbody:
@@ -371,10 +399,5 @@ PrefabInstance:
 --- !u!4 &686777925933479714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4440965682063875129, guid: 0b2b8baa85f88544f8d649fd60f7f347, type: 3}
-  m_PrefabInstance: {fileID: 3757856006387149595}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &686777925933479717 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 4440965682063875134, guid: 0b2b8baa85f88544f8d649fd60f7f347, type: 3}
   m_PrefabInstance: {fileID: 3757856006387149595}
   m_PrefabAsset: {fileID: 0}

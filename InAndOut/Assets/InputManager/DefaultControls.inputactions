@@ -38,8 +38,8 @@
                     "id": "b4339ff8-4f36-4063-b0de-5b6e03e8bac7",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": "Press",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -177,8 +177,8 @@
                 },
                 {
                     "name": "",
-                    "id": "c9a32b24-3a4d-46fa-9097-326a377e270a",
-                    "path": "<SwitchProControllerHID>/buttonEast",
+                    "id": "bc840ad2-6344-48e6-ae5b-33d6ba09fda2",
+                    "path": "<SwitchProControllerHID>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "SwitchProController",

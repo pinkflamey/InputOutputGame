@@ -60,7 +60,7 @@ public class CalculateMonsterDest : MonoBehaviour
          a = 3.3*/
 
         //Calculate the required distance
-        calculatedDistance = CalculateDistance(nHr, growthFactor, multiplierHigher);
+        //calculatedDistance = CalculateDistance(nHr, growthFactor, multiplierHigher);
     }
 
     private IEnumerator Timer(float delayHR, float delayRN)
@@ -69,7 +69,7 @@ public class CalculateMonsterDest : MonoBehaviour
          * This timer sets a new position every delay seconds
          */
         
-        Debug.Log("Restarting timer loop...");
+        //Debug.Log("Restarting timer loop...");
 
         //If the distance calculated is over 10
         if (calculatedDistance > 10)
@@ -102,7 +102,7 @@ public class CalculateMonsterDest : MonoBehaviour
     
     private IEnumerator SetHRBasedPosition(float distance)
     {
-        Debug.Log("Starting pos calculation...");
+        //Debug.Log("Starting pos calculation...");
         
         //Create random direction to attempt
         randDir = new Vector3(Random.Range(-1, 2), 0, Random.Range(-1, 2));
@@ -116,7 +116,7 @@ public class CalculateMonsterDest : MonoBehaviour
         //If the calculated distance based on the navmesh is between minDistance% and maxDistance%
         if (pathDist >= distance * minDistance && pathDist <= distance * maxDistance)
         {
-            Debug.Log("Succeeded");
+            //Debug.Log("Succeeded");
 
             transform.localPosition = newPos; //Set the new position
             
@@ -134,7 +134,7 @@ public class CalculateMonsterDest : MonoBehaviour
             //If the failed tries has NOT exceeded the maximum failed tries
             if (failedTries < maxFailedTries)
             {
-                Debug.Log("Position did not meet requirements. Restarting loop...");
+                //Debug.Log("Position did not meet requirements. Restarting loop...");
                 
                 //Restart the loop, try again
                 StartCoroutine(SetHRBasedPosition(calculatedDistance));
@@ -142,7 +142,7 @@ public class CalculateMonsterDest : MonoBehaviour
             }
             else //If the failed tries has exceeded the maximum failed tries
             {
-                Debug.Log("Too many failed tries: setting position in front of player based on distance");
+                //Debug.Log("Too many failed tries: setting position in front of player based on distance");
 
                 //Set the marker position to in front of the player based on distance
                 transform.position =
