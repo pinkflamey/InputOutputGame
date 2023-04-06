@@ -224,7 +224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6581771245914913334, guid: 3bc920ed0bed82b47a8f970905aee1f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6581771245914913334, guid: 3bc920ed0bed82b47a8f970905aee1f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1136,7 +1136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6581771245914913334, guid: 3bc920ed0bed82b47a8f970905aee1f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6581771245914913334, guid: 3bc920ed0bed82b47a8f970905aee1f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1267,19 +1267,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 832168341}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1629909380}
-        m_TargetAssemblyTypeName: Microbit, Assembly-CSharp
-        m_MethodName: ConfirmPortSelection
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &832168341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,7 +1407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6581771245914913334, guid: 3bc920ed0bed82b47a8f970905aee1f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6581771245914913334, guid: 3bc920ed0bed82b47a8f970905aee1f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -2584,17 +2572,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1629909380 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2503570307345157465, guid: 6f56cc8b2b186244cb2740085c2e357e, type: 3}
-  m_PrefabInstance: {fileID: 1823488637}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acd888c7d08c66a4aba05edaaef30261, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1653517891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2704,7 +2681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6581771245914913334, guid: 3bc920ed0bed82b47a8f970905aee1f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6581771245914913334, guid: 3bc920ed0bed82b47a8f970905aee1f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

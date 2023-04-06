@@ -25,11 +25,13 @@ public class Microbit : MonoBehaviour
 
     [Space]
     
-    private  TMP_Dropdown dropdown;
+    private TMP_Dropdown dropdown;
     private SerialPort Serial;
 
+    private bool dropdownLoaded = false;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Serial = new SerialPort();
         
@@ -39,13 +41,9 @@ public class Microbit : MonoBehaviour
             ports.Add(port);
         }
 
-        try
-        {
-            dropdown = GameObject.Find("SSPDropdown").GetComponent<TMP_Dropdown>();
-            dropdown.ClearOptions();
-            dropdown.AddOptions(ports);
-        }
-        catch { }
+        dropdown = GameObject.Find("SSPDropdown").GetComponent<TMP_Dropdown>();
+        dropdown.ClearOptions();
+        dropdown.AddOptions(ports);
 
     }
 

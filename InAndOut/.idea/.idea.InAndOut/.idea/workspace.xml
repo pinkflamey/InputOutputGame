@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a2af1335-3f09-42f3-bdc0-a6b418174f7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InAndOut/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InAndOut/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputManager/DefaultControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputManager/DefaultControls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/MainMenu/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/MainMenu/MainMenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Manager/Microbit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Manager/Microbit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NormalHeartrateSetter.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NormalHeartrateSetter.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/heartrate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/heartrate.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +130,7 @@
       <workItem from="1679902320790" duration="12143000" />
       <workItem from="1680160414234" duration="10854000" />
       <workItem from="1680612898673" duration="9007000" />
-      <workItem from="1680765378818" duration="6537000" />
+      <workItem from="1680765378818" duration="7939000" />
     </task>
     <servers />
   </component>

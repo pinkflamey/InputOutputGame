@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   averageHeartrate: 0
   slider: {fileID: 1827608600}
-  totalTime: 15
+  totalTime: 5
   totalBeats: 0
   t: 0
 --- !u!1 &307927193

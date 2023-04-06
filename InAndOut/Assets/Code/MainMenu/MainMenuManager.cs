@@ -12,13 +12,13 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Button exit;
     
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         start.onClick.AddListener(delegate { GameManager.Instance.LoadScene("Main"); });
-        serialConfirm.onClick.AddListener(GameManager.MicroBit.ConfirmPortSelection);
-        selectFile.onClick.AddListener(GameManager.GameInfo.GetComponent<ReadTextFile>().SelectFile);
+        serialConfirm.onClick.AddListener(delegate { GameManager.MicroBit.ConfirmPortSelection(); });
+        selectFile.onClick.AddListener(delegate { GameManager.GameInfo.GetComponent<ReadTextFile>().SelectFile(); });
         setnHr.onClick.AddListener(delegate { GameManager.Instance.LoadScene("NormalHeartrateSetter"); });
-        exit.onClick.AddListener(GameManager.Instance.ExitGame);
+        exit.onClick.AddListener(delegate { GameManager.Instance.ExitGame(); });
     }
 
     // Update is called once per frame
