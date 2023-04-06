@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
@@ -20,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private CalculateMonsterDest hrDestCalc;
 
     [SerializeField] private bool movementLocked = false;
+    [SerializeField] private bool moving = false;
+    [SerializeField] private InputAction actionForward;
+
 
     private Rigidbody rb;
     private Animator camAnimator;
@@ -31,11 +35,17 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         camAnimator = transform.GetChild(0).GetComponent<Animator>();
         audioSource = GetComponents<AudioSource>()[1];
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
+         * Audio
+         */
+        
         if (playerState == PlayerState.Walking)
         {
             if (!audioSource.isPlaying)
@@ -51,66 +61,80 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         
-        //Movement checks
-        if (!movementLocked) //Only allow movement input while the movement IS NOT locked
-        {
-            
-            //Walk forward
-            if (Input.GetKey(KeyCode.W))
-            {
-                Vector3 newPosition  = transform.position + -transform.right * speed * Time.deltaTime;
-
-                rb.MovePosition(newPosition);
-                camAnimator.SetBool("moving", true); //Set moving parameter to true if the player is moving
-
-                playerState = PlayerState.Walking; //Set state to walking if player is moving
-
-            }
-            else
-            { //Set moving parameter to false if the player stops moving
-                camAnimator.SetBool("moving", false);
-
-                playerState = PlayerState.Idle; //Set state to idle if player is idle
-            }
-
-            //Rotate left (-90 degrees)
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Rotate(-90);
-            }
+        /*
+         * Movement checks
+         *   If moving and movement not locked, move player
+         *   Sets camera animation to false if the player is not moving (or if movement is locked)
+         *   Sets state to Idle if player is not moving (or if movement is locked)
+         */
         
-            //Rotate right (+90 degrees)
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Rotate(90);
-            }
+        
+        if (moving && !movementLocked) //If moving & movement is not locked
+        {
+            //Position to walk to
+            Vector3 newPosition  = transform.position + -transform.right * speed * Time.deltaTime;
+            
+            rb.MovePosition(newPosition); //Move player
+            
             
         }
-        else
-        { //Set moving parameter to false if the movement gets locked
-            camAnimator.SetBool("moving", false);
+
+        if (movementLocked) //If the player can't move
+        {
+            playerState = PlayerState.Idle; //Set state to idle
         }
 
     }
 
-    void Rotate(float degrees)
+    public void OnMove(InputAction.CallbackContext context)
     {
-        Hashtable hash = iTween.Hash
+        /*
+         * Script runs when Input System in Player Input component receives moving input
+         */
+        
+        if (context.started)
+        {
+            Debug.Log("Started interaction");
+            moving = true;
+            
+            camAnimator.SetBool("moving", true); //Set moving parameter to true
+            playerState = PlayerState.Walking; //Set state to walking
+        }
+        else if (context.canceled)
+        {
+            Debug.Log("Canceled interaction");
+            moving = false;
+            
+            camAnimator.SetBool("moving", false); //Set moving parameter to false if the player stops moving
+            playerState = PlayerState.Idle; //Set state to idle
+        }
+    }
+
+    public void Rotate(float degrees)
+    {
+        /*
+         * Script runs when Input System in Player Input component receives rotation input
+         */
+        
+        if (!movementLocked) //If movement is not locked
+        {
+            Hashtable hash = iTween.Hash
             (
-            "amount", new Vector3(0, degrees, 0), //Amount to rotate
-            "time", rotationDuration, //Time for the rotation to take
-            "onstarttarget", gameObject,
-            "onstart", "SetMovementState", //Lock movement
-            "oncompletetarget", gameObject,
-            "oncomplete", "SetMovementState", //Unlock movement
-            "easetype", iTween.EaseType.linear //Rotation is linear
+                "amount", new Vector3(0, degrees, 0), //Amount to rotate
+                "time", rotationDuration, //Time for the rotation to take
+                "onstarttarget", gameObject,
+                "onstart", "SetMovementLockState", //Lock movement
+                "oncompletetarget", gameObject,
+                "oncomplete", "SetMovementLockState", //Unlock movement
+                "easetype", iTween.EaseType.linear //Rotation is linear
             );
 
-        iTween.RotateAdd(gameObject, hash);
-
+            //Rotate player
+            iTween.RotateAdd(gameObject, hash);
+        }
     }
 
-    void SetMovementState()
+    void SetMovementLockState()
     {
         movementLocked = !movementLocked;
     }

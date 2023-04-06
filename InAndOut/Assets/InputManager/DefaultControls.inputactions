@@ -11,8 +11,8 @@
                     "id": "db51abc7-e297-4716-aa16-fd8b5a9307f7",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Turn Left",
@@ -78,17 +78,6 @@
                 },
                 {
                     "name": "",
-                    "id": "74726513-16e5-4ebb-aa82-e44d7319ed31",
-                    "path": "<Gamepad>/leftStick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "SwitchProController",
-                    "action": "Forward",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "70bf6074-f241-4852-a6cc-20c8f9d0efe9",
                     "path": "<Keyboard>/q",
                     "interactions": "",
@@ -122,8 +111,8 @@
                 },
                 {
                     "name": "",
-                    "id": "31b0e898-9883-4134-a186-49edf82e8666",
-                    "path": "<Gamepad>/leftStick/left",
+                    "id": "c6f3de83-4177-4d02-bd56-13da512c76f9",
+                    "path": "<SwitchProControllerHID>/leftShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "SwitchProController",
@@ -155,8 +144,8 @@
                 },
                 {
                     "name": "",
-                    "id": "9d83e89a-e029-4b82-8b5c-5a949eab4e78",
-                    "path": "<Gamepad>/leftStick/right",
+                    "id": "b29e6cdd-905a-479e-8a41-748766c75b6c",
+                    "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "SwitchProController",
@@ -166,8 +155,8 @@
                 },
                 {
                     "name": "",
-                    "id": "b29e6cdd-905a-479e-8a41-748766c75b6c",
-                    "path": "<Gamepad>/dpad/right",
+                    "id": "9d112d24-b206-45b5-be26-56ef3dd8eb79",
+                    "path": "<SwitchProControllerHID>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "SwitchProController",
