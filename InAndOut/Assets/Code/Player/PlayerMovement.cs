@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,6 +40,21 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    private void FixedUpdate()
+    {
+        /*
+         * Movement check to move player if moving, in FixedUpdate to prevent speed irregularities
+         */
+        
+        if (moving && !movementLocked) //If moving & movement is not locked
+        {
+            //Position to walk to
+            Vector3 newPosition  = transform.position + -transform.right * speed * Time.deltaTime;
+            
+            rb.MovePosition(newPosition); //Move player
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -67,17 +83,6 @@ public class PlayerMovement : MonoBehaviour
          *   Sets camera animation to false if the player is not moving (or if movement is locked)
          *   Sets state to Idle if player is not moving (or if movement is locked)
          */
-        
-        
-        if (moving && !movementLocked) //If moving & movement is not locked
-        {
-            //Position to walk to
-            Vector3 newPosition  = transform.position + -transform.right * speed * Time.deltaTime;
-            
-            rb.MovePosition(newPosition); //Move player
-            
-            
-        }
 
         if (movementLocked) //If the player can't move
         {

@@ -60,7 +60,7 @@ public class CalculateMonsterDest : MonoBehaviour
          a = 3.3*/
 
         //Calculate the required distance
-        //calculatedDistance = CalculateDistance(nHr, growthFactor, multiplierHigher);
+        calculatedDistance = CalculateDistance(nHr, growthFactor, multiplierHigher);
     }
 
     private IEnumerator Timer(float delayHR, float delayRN)

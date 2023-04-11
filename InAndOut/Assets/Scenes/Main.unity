@@ -8975,6 +8975,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1869003175974673222, guid: 6f56cc8b2b186244cb2740085c2e357e, type: 3}
+      propertyPath: nHr
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 2503570307345157465, guid: 6f56cc8b2b186244cb2740085c2e357e, type: 3}
       propertyPath: baudrate
       value: 115200
