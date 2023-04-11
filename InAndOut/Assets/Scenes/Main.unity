@@ -8549,7 +8549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 686777925799607602, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
       propertyPath: speed
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 686777925799607602, guid: b0851fed388ae034ba4ef547a40c566f, type: 3}
       propertyPath: hrDestCalc
