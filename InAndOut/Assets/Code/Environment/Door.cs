@@ -11,11 +11,14 @@ public class Door : MonoBehaviour
     public bool isLocked = false;
 
     private Animator animator;
+
+    [SerializeField] private BoxCollider bc;
     
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        bc = gameObject.GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -29,6 +32,7 @@ public class Door : MonoBehaviour
             {
                 animator.SetTrigger("Close"); //Close it
                 isOpen = !isOpen; //Set isOpen to false (door is closed)
+
             }
             else if(!isOpen && !isLocked) //If the door is closed and not locked;
             {
@@ -39,6 +43,7 @@ public class Door : MonoBehaviour
             {
                 Debug.Log("Door is locked!"); //Door is locked
             }
+
         }
 
         if (triggerLock)
@@ -46,6 +51,8 @@ public class Door : MonoBehaviour
             triggerLock = !triggerLock;
             isLocked = !isLocked;
         }
+
+        
     }
 
     public void TriggerDoor()
@@ -56,5 +63,10 @@ public class Door : MonoBehaviour
     public void TriggerDoorLock()
     {
         triggerLock = true;
+    }
+
+    public void TriggerHitbox()
+    {
+        bc.enabled = !bc.enabled;
     }
 }
