@@ -25,13 +25,23 @@ public class PlayerInteractionHandler : MonoBehaviour
 
     private List<Interactable> FindInteractables()
     {
+        /*
+         * IMPORTANT
+         *
+         * Interactable objects that have the Interactable component, require a collider that has isTrigger enabled
+         * This means some interactable objects may need 2 colliders (like doors), 1 for the player movement and one for the interactable.
+         */
+        
         List<Interactable> foundInteractables = new List<Interactable>();
         
         foreach (Collider c in Physics.OverlapSphere(transform.position, interactionRange))
         {
-            if (c.gameObject.TryGetComponent<Interactable>(out Interactable inter))
+            if (c.isTrigger == true)
             {
-                foundInteractables.Add(inter);
+                if (c.gameObject.TryGetComponent<Interactable>(out Interactable inter))
+                {
+                    foundInteractables.Add(inter);
+                }
             }
         }
 
@@ -63,8 +73,11 @@ public class PlayerInteractionHandler : MonoBehaviour
     {
         if (context.started)
         {
-            Debug.Log("Started interaction");
-            closestInteractable.Interact();
+            //Debug.Log("Started interaction");
+            if (closestInteractable != null)
+            {
+                closestInteractable.Interact();
+            }
         }
     }
 }
