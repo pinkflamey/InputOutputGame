@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerState: 0
-  speed: 5
+  speed: 2
   rotationDuration: 2
   hrDestCalc: {fileID: 0}
   movementLocked: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37233f706e72e904bb91082aab978dab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionRange: 3
+  interactionRange: 4
   closestInteractable: {fileID: 0}
   interactablesInRange: []
 --- !u!114 &-6503530295951510249
