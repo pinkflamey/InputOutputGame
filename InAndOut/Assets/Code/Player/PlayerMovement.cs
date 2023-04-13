@@ -137,8 +137,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void SetMovementLockState()
+    public void SetMovementLockState(bool state)
     {
-        movementLocked = !movementLocked;
+        movementLocked = state;
     }
 }

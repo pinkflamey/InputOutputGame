@@ -7,7 +7,8 @@ public class Interactable : MonoBehaviour
     public enum InteractTypes
     {
         Note,
-        Door
+        Door,
+        Terminal
     }
 
     [SerializeField] private InteractTypes type;
@@ -30,6 +31,9 @@ public class Interactable : MonoBehaviour
         {
             case InteractTypes.Door:
                 GetComponent<Door>().TriggerDoor();
+                break;
+            case InteractTypes.Terminal:
+                StartCoroutine(GetComponent<KeycodeTerminal>().StartCodeEnter());
                 break;
             default:
                 break;
