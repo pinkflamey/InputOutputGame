@@ -35,6 +35,9 @@ public class Interactable : MonoBehaviour
             case InteractTypes.Terminal:
                 StartCoroutine(GetComponent<KeycodeTerminal>().StartCodeEnter());
                 break;
+            case InteractTypes.Note:
+                GetComponent<Note>().OpenNote();
+                break;
             default:
                 break;
         }

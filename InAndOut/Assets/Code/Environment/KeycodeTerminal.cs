@@ -84,4 +84,9 @@ public class KeycodeTerminal : MonoBehaviour
             yield return null;
         }
     }
+
+    public void SetHasCode(bool state)
+    {
+        hasCode = state;
+    }
 }

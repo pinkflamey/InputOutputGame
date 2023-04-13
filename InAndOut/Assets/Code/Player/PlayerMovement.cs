@@ -127,8 +127,10 @@ public class PlayerMovement : MonoBehaviour
                 "time", rotationDuration, //Time for the rotation to take
                 "onstarttarget", gameObject,
                 "onstart", "SetMovementLockState", //Lock movement
+                "onstartparams", true,
                 "oncompletetarget", gameObject,
                 "oncomplete", "SetMovementLockState", //Unlock movement
+                "oncompleteparams", false,
                 "easetype", iTween.EaseType.linear //Rotation is linear
             );
 
