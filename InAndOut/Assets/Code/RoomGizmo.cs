@@ -13,8 +13,8 @@ public class RoomGizmo : MonoBehaviour
         {
             if (c.gameObject.tag == "RoomParent")
             {
-                Handles.color = Color.red;
-                Handles.Label(c.position, c.gameObject.name);
+                /*Handles.color = Color.red;
+                Handles.Label(c.position, c.gameObject.name);*/
                 
             }
             else

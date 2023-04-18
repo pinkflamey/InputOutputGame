@@ -28,14 +28,15 @@ public class Information : MonoBehaviour
         try
         {
             debug_hr_ui = GameObject.Find("HR-debug").GetComponent<TextMeshProUGUI>();
+            //Set debug text
+            debug_hr_ui.text = heartrate.ToString();
         }
         catch{}
         
         //Store heartrate in information script, not only in ReadTextFile
         Int32.TryParse(rtf.GetFileData(), out heartrate);
         
-        //Set debug text
-        debug_hr_ui.text = heartrate.ToString();
+        
     }
 
     public GameObject GetDebugObject(Debugger.DebugTools tool)

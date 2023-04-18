@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -68,5 +69,11 @@ public class Door : MonoBehaviour
     public void TriggerHitbox()
     {
         bc.enabled = !bc.enabled;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawSphere(transform.position + Vector3.up * 2, 1);
     }
 }

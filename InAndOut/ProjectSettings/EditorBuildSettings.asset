@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NormalHeartrateSetter.unity
     guid: 97afd62f0377bb01a8d7f916d4d42884
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: e1660fbf8adf47f46b076b89da0c0b6d
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 01008b788d375b648a9d81edceebd3ef
   m_configObjects: {}

@@ -24,6 +24,7 @@ public class MonsterMovement : MonoBehaviour
     [SerializeField] private float realSpeed;
     [SerializeField] private Vector3 agentDestination;
     [SerializeField] private float distanceLeft;
+    [SerializeField] private float distanceLevelToPlayer;
     [SerializeField] private Transform hrDestination;
     [SerializeField] private bool running;
     [SerializeField] private bool attacking;
@@ -54,6 +55,7 @@ public class MonsterMovement : MonoBehaviour
 
         agentDestination = agent.destination;
         distanceLeft = Radar.CalculatePathDistance(transform.position, agentDestination);
+        distanceLevelToPlayer = player.GetComponent<Radar>().GetDistanceLevel();
         
         /* Speed handling */
         
@@ -93,6 +95,12 @@ public class MonsterMovement : MonoBehaviour
             StartCoroutine(SetDestination(hrDestination.transform.position, 0f));
         }
 
+        //If the distance between monster and player is level 4, AND the heartrate is 1.25 or more times higher than normal:
+        if (distanceLevelToPlayer == 4 && GameManager.GameInfo.GetHeartRate() >= GameManager.GameInfo.GetNHr() * 1.25)
+        {
+            GameManager.Instance.LoadScene("Lose");
+        }
+
         //If the monster is notified of a location
         if (isNotified)
         {
@@ -105,6 +113,8 @@ public class MonsterMovement : MonoBehaviour
             //If the monster arrived at notifying position
             if (distanceLeft <= 1f)
             {
+                
+                
                 //Set isNotified to false after a delay
                 StartCoroutine(DeNotify(2f));
             }
