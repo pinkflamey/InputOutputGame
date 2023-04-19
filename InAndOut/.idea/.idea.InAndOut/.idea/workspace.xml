@@ -3,30 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a2af1335-3f09-42f3-bdc0-a6b418174f7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InAndOut/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InAndOut/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Environment/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Environment/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Manager/Information.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Manager/Information.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Monster/MonsterAudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Monster/MonsterAudioController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Monster/MonsterMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Monster/MonsterMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Player/CalculateMonsterDest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Player/CalculateMonsterDest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/RoomGizmo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/RoomGizmo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Floor/Grass.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Floor/Grass.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Floor/Materials/Grass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Floor/Materials/Grass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Floor/mConcrete.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Floor/mConcrete.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Floor/mFloor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Floor/mFloor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/SimpleInput/ExtraResources.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Environment/WallsFences/DoubleDoorway.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Environment/WallsFences/DoubleDoorway.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Environment/WallsFences/Wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Environment/WallsFences/Wall.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Environment/WallsFences/WallDoorWay.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Environment/WallsFences/WallDoorWay.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Environment/WallsFences/chainlink_barbwire-2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Environment/WallsFences/chainlink_barbwire-2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Environment/WallsFences/chainlink_barbwire-3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Environment/WallsFences/chainlink_barbwire-3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Monster/Monster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Monster/Monster.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lose.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lose.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScenen.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScenen.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sounds/MonsterWalking.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sounds/MonsterWalking.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Win.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Win.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Python/heartrate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/heartrate.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +57,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../Builds/v0.5\InAndOut.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Builds/v1.0\InAndOut.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\pinkf\Documents\Mediacollege Amsterdam\Bewijzenmap\Periode 2.3\Special IO\InputOutputGame\Builds\v0.1" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -160,7 +140,8 @@
       <workItem from="1681214124112" duration="1213000" />
       <workItem from="1681371522579" duration="6642000" />
       <workItem from="1681738799712" duration="1560000" />
-      <workItem from="1681821405466" duration="5962000" />
+      <workItem from="1681821405466" duration="7049000" />
+      <workItem from="1681898405659" duration="1794000" />
     </task>
     <servers />
   </component>
