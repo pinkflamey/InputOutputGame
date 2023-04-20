@@ -31,6 +31,8 @@ public class Radar : MonoBehaviour
         levels = new float[][]{level0, level1, level2, level3, level4};
 
         agent = GetComponent<NavMeshAgent>();
+        
+        GameManager.MicroBit.WriteString("0");
     }
 
     // Update is called once per frame

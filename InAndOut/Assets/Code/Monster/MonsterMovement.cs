@@ -95,8 +95,8 @@ public class MonsterMovement : MonoBehaviour
             StartCoroutine(SetDestination(hrDestination.transform.position, 0f));
         }
 
-        //If the distance between monster and player is level 4, AND the heartrate is 1.25 or more times higher than normal:
-        if (distanceLevelToPlayer == 4 && GameManager.GameInfo.GetHeartRate() >= GameManager.GameInfo.GetNHr() * 1.25)
+        //If the distance between monster and player is level 4, AND the heartrate is 1.10 or more times higher than normal:
+        if (distanceLevelToPlayer == 4 && GameManager.GameInfo.GetHeartRate() >= GameManager.GameInfo.GetNHr() * 1.10)
         {
             GameManager.Instance.LoadScene("Lose");
         }

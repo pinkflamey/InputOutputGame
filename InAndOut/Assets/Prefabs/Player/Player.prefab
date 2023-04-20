@@ -193,20 +193,20 @@ MonoBehaviour:
   distanceToMonster: 0
   distanceLevel: 0
   level0:
-  - 50
+  - 75
   - Infinity
   - 0
   level1:
-  - 25
-  - 50
+  - 35
+  - 75
   - 1
   level2:
-  - 15
-  - 25
+  - 20
+  - 35
   - 2
   level3:
   - 10
-  - 15
+  - 20
   - 3
   level4:
   - 0

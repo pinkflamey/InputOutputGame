@@ -25,26 +25,17 @@ public class Microbit : MonoBehaviour
 
     [Space]
     
-    private TMP_Dropdown dropdown;
-    private SerialPort Serial;
+    private Dropdown dropdown;
+    public SerialPort Serial;
 
     private bool dropdownLoaded = false;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         Serial = new SerialPort();
         
-        string[] _ports = SerialPort.GetPortNames();
-        foreach (string port in _ports)
-        {
-            ports.Add(port);
-        }
-
-        dropdown = GameObject.Find("SSPDropdown").GetComponent<TMP_Dropdown>();
-        dropdown.ClearOptions();
-        dropdown.AddOptions(ports);
-
+        RefreshDropdown();
     }
 
     // Update is called once per frame
@@ -103,5 +94,21 @@ public class Microbit : MonoBehaviour
     public bool GetSerialStatus()
     {
         return serialConnected;
+    }
+
+    public void RefreshDropdown()
+    {
+        dropdown = GameObject.Find("Dropdown").GetComponent<Dropdown>();
+
+        dropdown.ClearOptions();
+        ports.Clear();
+        
+        string[] _ports = SerialPort.GetPortNames();
+        foreach (string port in _ports)
+        {
+            ports.Add(port);
+        }
+        
+        dropdown.AddOptions(ports);
     }
 }
