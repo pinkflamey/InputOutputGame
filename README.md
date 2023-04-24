@@ -1,5 +1,7 @@
 # InputOutputGame
 Repo for project Special I/O
+https://pinkflamey.itch.io/heartbeat-horror
+https://pinkflamey.nl/portfolio/heartbeathorror/
 
 ## Game
 
